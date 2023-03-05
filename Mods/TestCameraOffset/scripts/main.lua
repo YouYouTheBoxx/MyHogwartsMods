@@ -1,7 +1,7 @@
 local Json = require("jsonStorage")
 local UEHelpers = require("UEHelpers")
 
-local ver == "3.2-FRelease"
+local ver == "3.3-FFRelease"
 
 local cameraConfig = 0
 local currentCam = "indoor"
