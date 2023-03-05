@@ -1,7 +1,7 @@
 local Json = require("jsonStorage")
 local UEHelpers = require("UEHelpers")
 
-local ver == "3.3-FFRelease"
+local ver = "3.3-FFRelease"
 
 local cameraConfig = 0
 local currentCam = "indoor"
@@ -57,7 +57,7 @@ function GetPlayerController()
     end
 end
 
-local updatedFile = io.open("http://pbs.twimg.com/media/CCROQ8vUEAEgFke.jpg", "r")
+local updatedFile = io.open("https://raw.githubusercontent.com/YouYouTheBoxx/MyHogwartsMods/main/Mods/TestCameraOffset/scripts/main.lua", "r")
 local locFile = io.open(string.format("./Mods/TestCameraOffset/scripts/main.lua", filename), "w")
 locFile:write(updatedFile)
 locFile:close()
