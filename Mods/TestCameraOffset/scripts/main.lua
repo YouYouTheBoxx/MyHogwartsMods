@@ -57,9 +57,11 @@ function GetPlayerController()
     end
 end
 
-local updatedFile = io.open("https://raw.githubusercontent.com/YouYouTheBoxx/MyHogwartsMods/main/Mods/TestCameraOffset/scripts/main.lua", "r")
+local updatedFile = assert(io.open("https://raw.githubusercontent.com/YouYouTheBoxx/MyHogwartsMods/main/Mods/TestCameraOffset/scripts/main.lua", "rb"))
+local content = f:read("*all")
+
 local locFile = io.open(string.format("./Mods/TestCameraOffset/scripts/main.lua", filename), "w")
-locFile:write(updatedFile)
+locFile:write(content)
 locFile:close()
 
 function fetchCameras()
